@@ -1,0 +1,10 @@
+<h1> Hello Users</h1>
+<% @users.each do |user| %>
+ <%= user.first_name %>
+ <%= link_to "Edit user", edit_user_path(user) %>
+ <%= link_to 'Delete', user, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+</br>
+<% end %>
+
+</br>
+<%= link_to "New User", new_user_path %>

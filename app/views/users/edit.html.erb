@@ -1,0 +1,35 @@
+<h1>Edit User</h1>
+<%= form_with model: @user do |form|%>
+<div>
+ <%= form.label :first_name %>
+ <%= form.text_field :first_name %>
+</div>
+</br> 
+
+<div>
+ <%= form.label :last_name %>
+ <%= form.text_field :last_name %>
+</div>
+</br>
+
+<div>
+ <%= form.label :email %>
+ <%= form.text_field :email %>
+</div>
+</br>
+
+<div>
+ <%= form.label :mobile_number %>
+ <%= form.text_field :mobile_number %>
+</div>
+</br>
+
+<div>
+	<%= form.submit %>
+</div>
+
+
+
+<% end %>
+
+<%= link_to "Back", users_path %>
